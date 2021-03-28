@@ -1,0 +1,67 @@
+{
+  "name": "coin-trading",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://kambing86.github.io/coin-trading/",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@types/jest": "26.0.22",
+    "@types/node": "14.14.37",
+    "@types/react": "17.0.3",
+    "@types/react-dom": "17.0.3",
+    "ag-grid-community": "^25.1.0",
+    "ag-grid-react": "^25.1.0",
+    "date-fns": "^2.19.0",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.1.22",
+    "react": "experimental",
+    "react-dom": "experimental",
+    "react-google-charts": "^3.0.15",
+    "react-redux": "^7.2.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
+    "rxjs": "next",
+    "typesafe-actions": "^5.1.0",
+    "typescript": "4.2.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "prettier": "prettier --check 'src/**/*.*'",
+    "prettier:write": "prettier --write 'src/**/*.*'",
+    "lint": "eslint 'src/**/*.{j,t}s{,x}'",
+    "lint:fix": "eslint --fix 'src/**/*.{j,t}s{,x}'",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-router-dom": "^5.1.7",
+    "eslint-config-prettier": "^8.1.0",
+    "gh-pages": "^3.1.0",
+    "husky": "^5.2.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  }
+}
