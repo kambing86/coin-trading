@@ -20,7 +20,11 @@ const CancelOrderButton = ({ data }: Props) => {
     // https://github.com/ag-grid/ag-grid/issues/3222#issuecomment-524034219
     return <div></div>;
   }
-  return <Button onClick={clickHandler}>Cancel</Button>;
+  return (
+    <Button variant="contained" color="secondary" onClick={clickHandler}>
+      Cancel
+    </Button>
+  );
 };
 
 export default memo(CancelOrderButton);
