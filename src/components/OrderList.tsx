@@ -21,7 +21,7 @@ const OrderList = ({ className, name }: Props) => {
   const orders = useSelector(getOrders(name));
 
   useEffect(() => {
-    setRowData(orders);
+    setRowData(orders.reverse());
     gridColumnApi.current?.autoSizeAllColumns();
   }, [orders]);
 
