@@ -33,7 +33,7 @@ const OrderSummary = ({ className, name }: Props) => {
         sellQtyLeft = 0;
       }
       return {
-        sellQty: sellQty,
+        sellQty: sellQtyLeft,
         settled: settled + qty * (val.actualPrice ?? 0),
       };
     },
@@ -46,7 +46,7 @@ const OrderSummary = ({ className, name }: Props) => {
   const totalSellAmount = sellOrders.reduce((acc, val) => {
     return acc + val.quantity * (val.actualPrice ?? 0);
   }, 0);
-  const totalStockAmount = totalBuyAmount - totalSellAmount;
+  const totalStockAmount = totalBuyAmount - totalSettled;
 
   return (
     <div className={className}>
