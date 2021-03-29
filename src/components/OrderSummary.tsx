@@ -66,7 +66,7 @@ interface Props {
 const OrderSummary = ({ className, name }: Props) => {
   const orders = useSelector(getOrders(name));
   const data = useRef(getSummary$());
-  const [totalOrder] = useObservable(data.current.totalOrder$);
+  const [totalOrder] = useObservable(() => data.current.totalOrder$);
   const totalOrderRef = useRef(totalOrder.data);
   totalOrderRef.current = totalOrder.data;
   useEffect(() => {
@@ -76,7 +76,7 @@ const OrderSummary = ({ className, name }: Props) => {
       .splice(totalSummarizedOrder);
     remainingOrders.forEach((o) => data.current.orderInput$.next(o));
   }, [orders]);
-  const [summary] = useObservable(data.current.summary$);
+  const [summary] = useObservable(() => data.current.summary$);
   const totalStocksInHand = summary.data?.totalStocksInHand ?? 0;
   const totalStockAmount = summary.data?.totalStockAmount ?? 0;
   const totalSellAmount = summary.data?.totalSellAmount ?? 0;

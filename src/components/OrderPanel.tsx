@@ -23,7 +23,7 @@ interface Props {
 
 export const OrderPanel = ({ name, className }: Props) => {
   const classes = useStyles();
-  const [price] = useObservable(getPrice$(name));
+  const [price] = useObservable(() => getPrice$(name));
   const { data } = price;
   const [type, setType] = useState<OrderType>(OrderType.BUY);
   const typeOptions: OptionType[] = useMemo(

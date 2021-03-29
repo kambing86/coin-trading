@@ -7,7 +7,7 @@ interface Props {
 }
 
 const LatestPrice = ({ name }: Props) => {
-  const [price] = useObservable(getPrice$(name));
+  const [price] = useObservable(() => getPrice$(name));
   const { data } = price;
   if (!data) {
     return null;

@@ -21,7 +21,7 @@ function getInitialState<ReturnData>(): ObserverState<ReturnData> {
 }
 
 export default function useObservable<ReturnData>(
-  initialObservable?: Observable<ReturnData> | (() => Observable<ReturnData>),
+  initialObservable?: () => Observable<ReturnData>,
 ): [
   ObserverState<ReturnData>,
   React.Dispatch<React.SetStateAction<Observable<ReturnData>>>,

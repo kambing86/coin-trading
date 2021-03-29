@@ -17,7 +17,7 @@ interface Props {
 }
 
 const CandlestickChart = ({ name, className }: Props) => {
-  const [price] = useObservable(getPriceSession$(name, 10, mapDataFunc));
+  const [price] = useObservable(() => getPriceSession$(name, 10, mapDataFunc));
   const { data, error } = price;
   if (error) {
     return <>{error.toString()}</>;
