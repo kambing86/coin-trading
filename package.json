@@ -39,9 +39,6 @@
     "lint:fix": "eslint --fix 'src/**/*.{j,t}s{,x}'",
     "prepare": "husky install"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
